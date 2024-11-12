@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}java class {% endblock %}</title>
+</head>
+<body>
+<header>
+    <h1> my jinja templating class</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'my_home' %}">home</a></li>
+            <li><a href="{% url 'my_about' %}">about us</a></li>
+            <li><a href="{% url 'my_contact' %}">contact us</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block content %}
+{#        this is whear other page content is#}
+
+
+    {% endblock %}
+</main>
+
+<footer>
+    <p>&copy; 2024 java clas</p>
+</footer>
+
+</body>
+</html>
